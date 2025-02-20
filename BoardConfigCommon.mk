@@ -53,8 +53,9 @@ TARGET_NEEDS_DTBOIMAGE := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
-# Fingerprint
-$(call soong_config_set,samsung_udfps,dimlayerzorder)
+# FOD
+$(call soong_config_set,samsung_udfps,udfps_zorder,0x20000000u)
+$(call soong_config_set,samsung_udfps,dim_layer_zorder,0x20000001u)
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \

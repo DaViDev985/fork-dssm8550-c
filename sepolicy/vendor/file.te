@@ -39,6 +39,16 @@ type sysfs_lcd_writable, sysfs_type, fs_type;
 type sysfs_sec_touchscreen, sysfs_type, fs_type;
 type sysfs_battery, sysfs_type, fs_type, rw_fs_type;
 
+
+# night_dim
+type sysfs_nightdim, sysfs_type, fs_type, rw_fs_type;
+
+# fod_pos
+type sysfs_fingerprint_pos, sysfs_type, fs_type;
+
+# Allow sec_tsp access
+type sec_tsp_sysfs, fs_type, sysfs_type;
+
 # Proc
 type proc_simslot_count, fs_type, proc_type;
 

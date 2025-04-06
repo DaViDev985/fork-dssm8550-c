@@ -1,15 +1,13 @@
-# All unpinned blobs are extracted from S9160ZHU5CXK1
+# All unpinned blobs are extracted from S9160ZHS6CYC1
 
 # Current blobs with ELF checks disabled:
 # libar-pal depends on libagmclient, which is a gnu makefile target
 # libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
-# lowi-server, qms depend on libwpa_client, which is a gnu makefile target
 
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
-vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libdsphist_qc.so
@@ -134,13 +132,9 @@ vendor/lib64/lib_SoundAlive_play_plus_ver800.so
 vendor/lib64/lib_SoundBooster_ver1100.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libquasar.so
-vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/soundfx/libswspatializer.so
 
 # Audio configs
 vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
@@ -159,12 +153,7 @@ vendor/etc/audio_effects_spatializer.xml
 vendor/etc/audio_policy_configuration_base.xml
 vendor/etc/card-defs.xml
 vendor/etc/sec_audio_volume_curve.xml
-vendor/etc/situation_audio_policy_volumes_sec.xml
 vendor/etc/usecaseKvManager.xml
-
-# Audio firmware
-vendor/firmware/SoundBoosterParam.bin
-vendor/firmware/dax_param.bin
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
@@ -284,8 +273,6 @@ vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/cdsp_face.so
 vendor/lib64/com.qti.qseeaon.so
 vendor/lib64/com.qti.qseeutils.so
-vendor/lib64/com.qti.settings.sm8550.so
-vendor/lib64/com.qti.stats.common.so
 vendor/lib64/hw/camera.unihal.default.so
 vendor/lib64/libAFSegmenter_v1.camera.samsung.so
 vendor/lib64/libAIHighRes_interface.so
@@ -378,7 +365,7 @@ vendor/lib64/libhdraid.gpu.arcsoft.so
 vendor/lib64/libhdraid.npu.arcsoft.so
 vendor/lib64/libhme.so
 vendor/lib64/libhypermotion_core.so
-vendor/lib64/libhypermotion_interface.so
+vendor/lib64/libiddqd.uniplugin@1.0.so
 vendor/lib64/libimage_enhancement.arcsoft.so
 vendor/lib64/libimagecodec_native.quram.so
 vendor/lib64/libimgproc_sw.unifunc@common.so
@@ -464,7 +451,6 @@ vendor/lib64/libthreadutils.so
 vendor/lib64/libtswrappercommon.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libuniplugin.so
-vendor/lib64/libvdis.uniplugin@1.0.so
 vendor/lib64/libvdis_core.so
 vendor/lib64/libvideobeauty.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
@@ -699,7 +685,7 @@ vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint-V1-ndk.so
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/xtra-daemon
 vendor/etc/batching.conf
 vendor/etc/gnss_antenna_info.conf
@@ -754,7 +740,6 @@ vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
 
 # Gatekeeper
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib64/hw/gatekeeper.mdfpp.so
 
 # Graphics (Adreno firmware)
@@ -805,8 +790,8 @@ vendor/lib64/libshctrl.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk.so
 
 # Hotword Enrollment
-product/priv-app/HotwordEnrollmentOKGoogleEx4HEXAGON/HotwordEnrollmentOKGoogleEx4HEXAGON.apk
-product/priv-app/HotwordEnrollmentXGoogleEx4HEXAGON/HotwordEnrollmentXGoogleEx4HEXAGON.apk
+product/priv-app/HotwordEnrollmentOKGoogleEx4HEXAGON/HotwordEnrollmentOKGoogleEx4HEXAGON.apk|b9986addb4957132e68dc0a8ea648ea6506d44f6
+product/priv-app/HotwordEnrollmentXGoogleEx4HEXAGON/HotwordEnrollmentXGoogleEx4HEXAGON.apk|ec6b8b49fe46c216c30aa78e29c591ed6d3c5b2e
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
@@ -841,7 +826,6 @@ vendor/etc/msm_irqbalance.conf
 vendor/bin/init.kernel.post_boot-kalama.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.post_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
@@ -857,7 +841,7 @@ vendor/lib64/libspcom.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service-qti;FIX_SONAME
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
@@ -1011,7 +995,7 @@ vendor/bin/ipacm-diag
 vendor/bin/ks
 vendor/bin/mdm_helper
 vendor/bin/mdm_helper_proxy
-vendor/bin/qms;DISABLE_CHECKELF
+vendor/bin/qms
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/qms.rc
 vendor/etc/seccomp_policy/qms.policy
@@ -1119,7 +1103,6 @@ vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
 
 # Thermal engine
-vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc
@@ -1129,7 +1112,7 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
 # Time services
-vendor/app/TimeService/TimeService.apk
+vendor/app/TimeService/TimeService.apk|b1d20ea3b505a3441cf3a20c12c69a29eaeb5a66
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so

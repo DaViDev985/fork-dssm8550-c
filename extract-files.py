@@ -43,7 +43,6 @@ lib_fixups: lib_fixups_user_type = {
     (
         'libagmclient',
         'libpalclient',
-        'libwpa_client',
     ): lib_fixup_remove,
 }
 
@@ -72,7 +71,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/unihal_android.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    'vendor/etc/init/android.hardware.security.keymint-service.rc': blob_fixup()
+    'vendor/lib64/libsamsungcamerahal.so': blob_fixup()
+        .sig_replace('E0 8A', '94 8B'),
+    'vendor/etc/init/android.hardware.security.keymint-service-qti.rc': blob_fixup()
         .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.keymint-service-qti'),
 }  # fmt: skip
 

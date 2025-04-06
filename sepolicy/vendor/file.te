@@ -50,6 +50,7 @@ type sysfs_fingerprint_pos, sysfs_type, fs_type;
 type sec_tsp_sysfs, fs_type, sysfs_type;
 
 # Proc
+type proc_last_kmsg, fs_type, proc_type;
 type proc_simslot_count, fs_type, proc_type;
 
 # Qms

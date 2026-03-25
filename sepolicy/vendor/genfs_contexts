@@ -121,11 +121,7 @@ genfscon sysfs "/devices/virtual/sec/sec-pa-thermistor"                       u:
 genfscon sysfs "/devices/virtual/sec/sec-wf-thermistor"                       u:object_r:vendor_sysfs_thermal:s0
 
 # Touchscreen
-genfscon sysfs "/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi" u:object_r:vendor_sysfs_touchscreen:s0
-genfscon sysfs "/devices/virtual/sec/tsp"                                                    u:object_r:vendor_sysfs_touchscreen:s0
-genfscon sysfs "/devices/virtual/sec/tsp/cmd"                                                u:object_r:vendor_sysfs_touchscreen_writable:s0
 genfscon sysfs "/devices/virtual/sec/tsp/ear_detect_enable"                                  u:object_r:vendor_sysfs_touchscreen_writable:s0
-genfscon sysfs "/devices/virtual/sec/tsp/prox_power_off"                                     u:object_r:vendor_sysfs_touchscreen_writable:s0
 genfscon sysfs "/devices/virtual/sec/tsp1"                                                    u:object_r:vendor_sysfs_touchscreen:s0
 genfscon sysfs "/devices/virtual/sec/tsp1/cmd"                                                u:object_r:vendor_sysfs_touchscreen_writable:s0
 genfscon sysfs "/devices/virtual/sec/tsp1/ear_detect_enable"                                  u:object_r:vendor_sysfs_touchscreen_writable:s0
